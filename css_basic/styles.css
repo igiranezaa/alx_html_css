@@ -1,0 +1,63 @@
+/* ===== FLEXBOX LAYOUT (Task 1) ===== */
+
+/* Body contains header, main, footer in a column */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Main contains article + aside in a row */
+main {
+  display: flex;
+  flex-direction: row;
+  flex: auto; /* let main grow/shrink */
+}
+
+/* Article takes 2/3 width */
+article {
+  flex: 2;
+  overflow-y: auto;
+}
+
+/* Aside takes 1/3 width */
+aside {
+  flex: 1;
+  overflow-y: auto;
+}
+
+/* ===== EXTRA DESIGN (Task 3 - allowed) ===== */
+
+article {
+  background: #ffffff;
+  border-right: 1px solid #eee;
+}
+
+aside {
+  background: #fafafa;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+header {
+  background: #222;
+  color: white;
+}
+
+header ul li a {
+  color: white;
+}
+
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Logo color */
+.logo {
+  color: gold;
+}
