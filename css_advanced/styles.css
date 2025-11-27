@@ -1,0 +1,379 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+.header {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* FIXED HERO BACKGROUND */
+.header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(7,22,41,0) 0%,
+            rgba(7,22,41,0.3) 40%,
+            rgba(7,22,41,0.8) 75%,
+            rgba(7,22,41,1) 100%
+        ),
+        url("images/Object.png");
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    z-index: 0;
+}
+
+.nav {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 80px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: white;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    z-index: 5;
+    min-height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;  /* FIXED */
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero h1 {
+    font-size: 70px;
+    font-weight: 800;
+}
+
+.hero-tags {
+    display: flex;
+    gap: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    justify-content: center;
+}
+
+.btn-primary {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background: #C271FF;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.hero-subtitle {
+    margin-top: 10px;
+}
+
+/* FIXED PROS ROW */
+.pros-row {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-top: 40px;
+}
+
+.pro-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* ================= QUOTE ================= */
+.quote-section {
+    background: #C271FF;
+    padding: 100px 0;
+    color: white;
+}
+
+.quote-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.quote-avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 3px solid white;
+    margin-right: 40px;
+}
+
+.quote-text {
+    font-size: 22px;
+    line-height: 1.6;
+}
+
+.quote-name {
+    margin-top: 15px;
+    font-weight: 700;
+}
+
+.quote-title {
+    opacity: 0.8;
+    font-style: italic;
+}
+
+/* ================= VIDEOS ================= */
+.videos-section {
+    background: white;
+    padding: 80px 0;
+    text-align: center;
+    color: #071629;
+}
+
+.videos-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+}
+
+.videos-title span {
+    color: #C271FF;
+}
+
+.videos-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.video-card {
+    width: 260px;
+    text-align: left;
+}
+
+.video-thumb {
+    position: relative;
+}
+
+.video-thumb img {
+    width: 100%;
+    height: 200px; /* FIXED */
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 55px;
+    height: 55px;
+    background: white;
+    border-radius: 50%;
+    background-image: url("images/play.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+.video-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.video-author img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.video-author span {
+    color: #C271FF;
+    font-weight: 700;
+}
+
+.video-rating {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-stars {
+    height: 16px;
+}
+
+.duration {
+    color: #C271FF;
+}
+
+/* ================= MEMBERSHIP ================= */
+.membership-section {
+    background: #071629;
+    padding: 90px 0;
+    color: white;
+    text-align: center;
+}
+
+.membership-title {
+    font-size: 32px;
+    margin-bottom: 50px;
+}
+
+.membership-title span {
+    color: #C271FF;
+}
+
+.membership-row {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.member-card {
+    max-width: 220px;
+}
+
+.member-icon {
+    width: 60px;
+    margin-bottom: 20px;
+}
+
+.btn-membership {
+    padding: 15px 40px;
+    border-radius: 30px;
+    background: linear-gradient(45deg,#C271FF,#9d4bff);
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ================= FAQ ================= */
+.faq-section {
+    background: white;
+    padding: 80px 0;
+    color: #071629;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 60px;
+}
+
+.faq-grid {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 80px;
+}
+
+.faq-item h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.faq-item p {
+    font-size: 15px;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background: #071629;
+    padding: 50px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* FIXED */
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-icon {
+    width: 40px;
+}
+
+.footer-logo-text {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-right {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+}
+
+.footer-copy {
+    margin-top: 25px;
+    opacity: 0.7;
+    font-size: 14px;
+}
