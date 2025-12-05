@@ -1,0 +1,141 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --primary: #FF6565;
+    --dark: #071629;
+    --light: #ffffff;
+    --max-width: 1000px;
+    --font-main: 'Source Sans Pro', sans-serif;
+}
+
+/* BASE */
+body {
+    font-family: var(--font-main);
+    background-color: var(--dark);
+    color: var(--light);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 10;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 180px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-list a {
+    color: var(--light);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-list a:hover,
+.nav-list a:active {
+    color: var(--primary);
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url("images/headphones_hero_1.jpg") center/cover no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.5), var(--dark));
+}
+
+.hero-content {
+    position: relative;
+    text-align: center;
+    padding-top: 200px;
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--light);
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    transition: opacity 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    opacity: 0.9;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: 30px auto 0;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+@media (max-width: 480px) {
+    .logo {
+        width: 140px;
+    }
+
+    .nav-list {
+        display: none;
+    }
+
+    .hero-content {
+        padding-top: 160px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+        padding: 0 10px;
+    }
+
+    .hero-description {
+        padding: 0 10px;
+    }
+}
